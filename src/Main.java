@@ -46,7 +46,7 @@ public class Main {
         int[] arr = generateRandomArray();
         int amountOfMoney = 0;
         int days = 30;
-        int average;
+        double average;
         for (int money : arr) {
             amountOfMoney += money;
         } average = amountOfMoney / days;
