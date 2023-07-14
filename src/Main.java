@@ -1,9 +1,12 @@
+import java.util.Arrays;
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
         task1();
         task2();
         task3();
+        task4();
     }
 
     public static int[] generateRandomArray() {
@@ -46,15 +49,21 @@ public class Main {
         int[] arr = generateRandomArray();
         int amountOfMoney = 0;
         int days = 30;
-        double average;
+        double averageAmountOfMoney;
         for (int money : arr) {
             amountOfMoney += money;
-        } average = amountOfMoney / days;
-        System.out.println("Средняя сумма трат за месяц составила " + average + " рублей");
+        }
+        averageAmountOfMoney = amountOfMoney / days;
+        System.out.println("Средняя сумма трат за месяц составила " + averageAmountOfMoney + " рублей");
     }
+
     public static void task4() {
         System.out.println("Задача 4");
-        int [] arr = generateRandomArray();
-
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        var fullName = "";
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            fullName = fullName + reverseFullName[i];
+        }
+        System.out.print(fullName);
     }
 }
